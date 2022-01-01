@@ -2,6 +2,11 @@
     background-color: $color-primary;
     grid-column: sidebar-start / sidebar-end;
     grid-row: 1 / -1;
+
+    @media only screen and (max-width: $breakpoint-large) {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
 }
 
 .sidebar-btn {
@@ -15,6 +20,16 @@
     cursor: pointer;
     transition: all 0.2s;
 
+    @media only screen and (max-width: $breakpoint-large) {
+        float: right;
+    }
+
+    @media only screen and (max-width: $breakpoint-small) {
+        height: 2px;
+        margin: 2rem 1rem;
+        width: 2.5rem;
+    }
+
     &::before,
     &::after {
         content: "";
@@ -24,13 +39,23 @@
         width: 4.5rem;
         background-color: #fff;
         transition: all 0.2s;
+        @media only screen and (max-width: $breakpoint-small) {
+            height: 2px;
+            width: 2.5rem;
+        }
     }
 
     &::before {
         top: -1.5rem;
+        @media only screen and (max-width: $breakpoint-small) {
+            top: -0.75rem;
+        }
     }
 
     &::after {
         top: 1.5rem;
+        @media only screen and (max-width: $breakpoint-small) {
+            top: 0.75rem;
+        }
     }
 }
