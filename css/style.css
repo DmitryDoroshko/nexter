@@ -76,6 +76,29 @@ body {
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1; }
 
+.sidebar-btn {
+  border: none;
+  border-radius: 0;
+  height: 3px;
+  width: 4.5rem;
+  background-color: #fff;
+  margin: 3rem 1.5rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s; }
+  .sidebar-btn::before, .sidebar-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 4.5rem;
+    background-color: #fff;
+    transition: all 0.2s; }
+  .sidebar-btn::before {
+    top: -1.5rem; }
+  .sidebar-btn::after {
+    top: 1.5rem; }
+
 .header {
   background-color: #54483a;
   grid-column: full-start / col-end 6; }
